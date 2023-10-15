@@ -1,0 +1,23 @@
+# CALCULATOR #Normal task 
+#The objective of this project is to design and develop a calculator application in Python that allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. The application should provide a user-friendly interface and accurate calculations.
+num1 = int(input('Enter the  number1:')) # Enter the value of num1
+num2 = int(input('Enter the  number2:')) # Enter the value of num1
+user = input('Enter any one of the operation(+,-,*,/,//): ') #selecting any one of the option to perform calculation
+if user == '+':
+    print(num1 + num2)
+elif user == '-':
+    print(num1 - num2)
+elif user == '/':
+    if num2 != 0:
+        print(num1 / num2)
+    elif num2 == 0:
+        print("undefined")
+    else:
+        print('0')
+elif user == '*':
+    print(num1*num2)
+elif user == '//':
+    print(num1 // num2)
+else:
+    print('0')
+# if user enters any one of the option that is not mentioned
