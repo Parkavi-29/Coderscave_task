@@ -1,0 +1,26 @@
+import random
+import time
+sentences = ["Live life to the fullest, and focus on the positive.",
+             "Always turn a negative situation into a positive situation.", 
+             "You'll never do a whole lot unless you're brave enough to try."]
+def calculate_wpm(key_presses,  period_of_time):
+    words = key_presses / 4
+    wpm = (words / period_of_time) * 60
+    return wpm
+def calculate_words(typed_text):
+    words = len(typed_text.split())
+    return words
+def main():
+    sentence = random.choice(sentences)
+    print("Press enter to start....")
+    print(f"Type this sentence: {sentence}\n")
+    start_time = time.time()
+    typed_text = input("Start typing: ")
+    end_time = time.time()
+    period_of_time = end_time - start_time
+    words = calculate_words(typed_text)
+    wpm = calculate_wpm(len(typed_text),  period_of_time)
+    print(f"\nYour typing speed: {wpm:.2f} WPM")
+    print("no.of.words typed:",words)
+if __name__ == "__main__":
+    main()
